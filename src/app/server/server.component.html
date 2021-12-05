@@ -1,7 +1,23 @@
+<label>Server Name 1 </label>
+<input type="text"
+       class ="form-control"
+       (input)="onUpdateServerName1($event)"
+>
+<p> </p>
+<label>Server Name 2 </label>
+<input type="text"
+       class ="form-control"
+       [(ngModel)] ="serverName2"
+>
+<p> Server Name 1 is : {{serverName1}}</p>
+<p> Server Name 2 is : {{serverName2}} </p>
+
+<p> </p>
 <button type = "button" 
         class="btn btn-primary" 
         [disabled]="!allowNewServer"
-        (click)="onCreateServer()"> Add Server </button>
+        (click)="onCreateServer()"> Add Server 
+</button>
 
 <p> {{serverCreationStatus}}</p>
 <p>Server with ID {{ serverID }} is {{ getServerStatus() }}</p>
