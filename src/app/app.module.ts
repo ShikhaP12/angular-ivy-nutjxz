@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 /**import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component'; */
-import {ServerComponent} from './server/server.component';
+import { ServerComponent } from './server/server.component';
+import { UserNameComponent } from './UserName/userName.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import {ServerComponent} from './server/server.component';
     HelloComponent,
     /**SuccessAlertComponent,
     WarningAlertComponent,*/
-    ServerComponent
+    ServerComponent,
+    UserNameComponent,
   ],
   bootstrap: [AppComponent],
 })
