@@ -6,6 +6,7 @@
 <div
   *ngFor="let logItem of log"
   [ngStyle]="{ backgroundColor: logItem >= 5 ? 'Blue' : 'transparent' }"
+  [ngClass]="{'white_text': logItem >= 5}"
 >
   {{ logItem }}
 </div>
