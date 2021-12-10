@@ -20,6 +20,12 @@ export class ServerComponent {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
+
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
+
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
   onCreateServer() {
     this.serverCreated = true;

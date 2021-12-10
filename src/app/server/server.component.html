@@ -23,4 +23,7 @@
 <ng-template #noServer>
   <p>No Server was created !!</p>
 </ng-template>
-<p>Server with ID {{ serverID }} is {{ getServerStatus() }}</p>
+
+<p [ngStyle]="{ backgroundColor: getColor() }">
+  Server with ID {{ serverID }} is {{ getServerStatus() }}
+</p>
