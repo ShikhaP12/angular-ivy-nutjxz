@@ -1,3 +1,11 @@
-<button>Display Details</button>
+<button (click)="showSecret = !showSecret">Display Details</button>
+<p></p>
+<button (click)="onLogDetails()">Log Details</button>
+<p *ngIf="showSecret">Secret Password = tuna</p>
 
-<p>Secret Password = tuna</p>
+<div
+  *ngFor="let logItem of log"
+  [ngStyle]="{ backgroundColor: logItem >= 5 ? 'Blue' : 'transparent' }"
+>
+  {{ logItem }}
+</div>
