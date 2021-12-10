@@ -8,6 +8,7 @@ import { HelloComponent } from './hello.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component'; */
 import { ServerComponent } from './server/server.component';
 import { UserNameComponent } from './UserName/userName.component';
+import { DisplayComponent } from './displayDetails/displayDetails.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -18,6 +19,7 @@ import { UserNameComponent } from './UserName/userName.component';
     WarningAlertComponent,*/
     ServerComponent,
     UserNameComponent,
+    DisplayComponent,
   ],
   bootstrap: [AppComponent],
 })
