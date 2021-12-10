@@ -1,23 +1,26 @@
 <label>Server Name 1 </label>
-<input type="text"
-       class ="form-control"
-       (input)="onUpdateServerName1($event)"
->
-<p> </p>
+<input type="text" class="form-control" (input)="onUpdateServerName1($event)" />
+<p></p>
 <label>Server Name 2 </label>
-<input type="text"
-       class ="form-control"
-       [(ngModel)] ="serverName2"
->
-<p> Server Name 1 is : {{serverName1}}</p>
-<p> Server Name 2 is : {{serverName2}} </p>
+<input type="text" class="form-control" [(ngModel)]="serverName2" />
+<p>Server Name 1 is : {{ serverName1 }}</p>
+<p>Server Name 2 is : {{ serverName2 }}</p>
 
-<p> </p>
-<button type = "button" 
-        class="btn btn-primary" 
-        [disabled]="!allowNewServer"
-        (click)="onCreateServer()"> Add Server 
+<p></p>
+<button
+  type="button"
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add Server
 </button>
 
-<p *ngIf="serverCreated"> Server was created, its name is {{serverName1}}</p>
+<p *ngIf="serverCreated; else noServer">
+  Server was created, its name is {{ serverName1 }}
+</p>
+
+<ng-template #noServer>
+  <p>No Server was created !!</p>
+</ng-template>
 <p>Server with ID {{ serverID }} is {{ getServerStatus() }}</p>
