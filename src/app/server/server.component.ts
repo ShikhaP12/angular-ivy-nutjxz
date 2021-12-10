@@ -12,6 +12,7 @@ export class ServerComponent {
   serverName1 = '';
   serverName2 = '';
   serverCreated = false;
+  servers = ['TestServer', 'Production Server'];
 
   getServerStatus() {
     return this.serverStatus;
@@ -29,8 +30,11 @@ export class ServerComponent {
   }
   onCreateServer() {
     this.serverCreated = true;
+    this.servers.push(this.serverName1);
     this.serverCreationStatus =
       'Server is created!!! Name is ' + this.serverName1;
+
+
   }
 
   onUpdateServerName1(event: Event) {
